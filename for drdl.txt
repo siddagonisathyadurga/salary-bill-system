@@ -1,0 +1,301 @@
+-- ORACLE INSERT SCRIPT
+INSERT ALL
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1001, 'Arjun Sharma', 45000, 2000, 1500, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1002, 'Priya Patel', 48000, 2500, 1800, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1003, 'Rahul Verma', 42000, 2000, 1200, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1004, 'Deepa Nair', 55000, 3000, 2000, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1005, 'Suresh Iyer', 50000, 2500, 1500, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1006, 'Ananya Reddy', 47000, 2200, 1600, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1007, 'Vikram Singh', 46000, 2000, 1400, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1008, 'Meera Joshi', 49000, 2600, 1700, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1009, 'Karan Malhotra', 43000, 2100, 1300, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1010, 'Sonal Gupta', 52000, 2800, 1900, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1011, 'Amit Das', 44000, 2000, 1400, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1012, 'Nisha Kulkarni', 51000, 2700, 1800, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1013, 'Rohan Mehta', 45500, 2250, 1550, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1014, 'Sneha Rao', 48500, 2400, 1750, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1015, 'Vijay Kumar', 42500, 2000, 1250, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1016, 'Aditi Bose', 54000, 3100, 2100, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1017, 'Manish Pandey', 50500, 2550, 1650, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1018, 'Kavita Deshmukh', 47500, 2300, 1650, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1019, 'Sandeep Gill', 46500, 2100, 1450, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1020, 'Pooja Hegde', 49500, 2650, 1750, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1021, 'Ravi Teja', 43500, 2150, 1350, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1022, 'Shalini Mishra', 52500, 2850, 1950, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1023, 'Abhishek Jain', 44500, 2050, 1450, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1024, 'Ritu Saxena', 51500, 2750, 1850, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1025, 'Gaurav Khanna', 45800, 2200, 1500, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1026, 'Swati Menon', 48800, 2450, 1700, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1027, 'Harish Balan', 42800, 2000, 1200, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1028, 'Divya Bharti', 53500, 3000, 2000, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1029, 'Pankaj Tripathi', 50200, 2500, 1600, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1030, 'Tanvi Shah', 47200, 2250, 1650, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1031, 'Nitin Gadkari', 46200, 2050, 1400, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1032, 'Rashmi Desai', 49200, 2600, 1700, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1033, 'Varun Dhawan', 43200, 2100, 1300, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1034, 'Kriti Sanon', 52200, 2800, 1900, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1035, 'Siddharth Roy', 44200, 2000, 1400, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1036, 'Ishita Dutta', 51200, 2700, 1800, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1037, 'Arvind Swami', 45200, 2200, 1500, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1038, 'Monalisa Bagchi', 48200, 2400, 1700, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1039, 'Rajesh Hamal', 42200, 2000, 1200, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1040, 'Bindu Madhavi', 53200, 3050, 2050, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1041, 'Mohit Raina', 50800, 2500, 1600, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1042, 'Sana Khan', 47800, 2300, 1600, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1043, 'Prateek Babbar', 46800, 2100, 1400, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1044, 'Zoya Akhtar', 49800, 2600, 1700, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1045, 'Farhan Khan', 43800, 2150, 1350, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1046, 'Urmila Matondkar', 52800, 2850, 1950, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1047, 'Sunil Shetty', 44800, 2050, 1450, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1048, 'Tabu Hashmi', 51800, 2750, 1850, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1049, 'Akshay Kumar', 45900, 2200, 1500, 'ACTIVE')
+  INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1050, 'Twinkle Khanna', 48900, 2450, 1700, 'ACTIVE')
+SELECT * FROM dual;
+
+-- IMPORTANT: YOU MUST RUN THIS LINE IN ORACLE
+COMMIT;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+sanctionpage.jsx just in case
+
+
+import React, { useState, useEffect } from "react";
+
+function SanctionPage() {
+  const [bills, setBills] = useState([]);
+  const [selectedRows, setSelectedRows] = useState([]);
+  const [inputDvNo, setInputDvNo] = useState("");
+  const [inputDvDate, setInputDvDate] = useState("");
+
+  useEffect(() => {
+    const storedBills = JSON.parse(localStorage.getItem("bills")) || [];
+    setBills(storedBills);
+  }, []);
+
+  const handleDvNoChange = (e) => {
+    const value = e.target.value;
+    const numericValue = value.replace(/[^0-9]/g, "").slice(0, 7);
+    setInputDvNo(numericValue);
+  };
+
+  const formatDate = (dateString) => {
+    if (!dateString) return "";
+    const [year, month, day] = dateString.split("-");
+    return `${day}-${month}-${year}`;
+  };
+
+  const selectedDVAmount = bills.reduce((acc, bill) => {
+    const billTotal = bill.employees.reduce((empAcc, emp) => {
+      const rowKey = `${bill.billNo}-${emp.personNo}`;
+      if (selectedRows.includes(rowKey)) {
+        return empAcc + (Number(emp.salary) + Number(emp.medical) + Number(emp.insurance));
+      }
+      return empAcc;
+    }, 0);
+    return acc + billTotal;
+  }, 0);
+
+  const handleCreateDV = () => {
+    if (inputDvNo.length < 3) {
+      alert("DV Number must be at least 3 digits long.");
+      return;
+    }
+
+    if (selectedRows.length === 0 || !inputDvNo || !inputDvDate) {
+      alert("Select at least one row and enter DV No & Date");
+      return;
+    }
+
+    const empIds = [];
+    bills.forEach(bill => {
+      bill.employees.forEach(emp => {
+        if (selectedRows.includes(`${bill.billNo}-${emp.personNo}`)) {
+          empIds.push(emp.personNo);
+        }
+      });
+    });
+
+    fetch("http://localhost:8080/api/employees/saveDv", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        dvNo: inputDvNo,
+        dvDate: inputDvDate,
+        employeeIds: empIds,
+      }),
+    }).then((res) => {
+      if (res.ok) {
+        alert("✅ DV Sanctioned!");
+        const updatedBills = bills.map((b) => {
+          const updatedEmployees = b.employees.map(emp => {
+            if (selectedRows.includes(`${b.billNo}-${emp.personNo}`)) {
+              return { ...emp, status: "Sanctioned", dvNo: inputDvNo, dvDate: inputDvDate };
+            }
+            return emp;
+          });
+          return { ...b, employees: updatedEmployees };
+        });
+
+        setBills(updatedBills);
+        localStorage.setItem("bills", JSON.stringify(updatedBills));
+        setSelectedRows([]);
+        setInputDvNo(""); 
+        setInputDvDate(""); 
+      }
+    });
+  };
+
+  const orangeTh = { border: "1px solid #dee2e6", padding: "10px", backgroundColor: "#f0ad4e", color: "white" };
+  const greenTh = { border: "1px solid #dee2e6", padding: "10px", backgroundColor: "#5cb85c", color: "white" };
+  const tdStyle = { border: "1px solid #dee2e6", padding: "10px", textAlign: "center" };
+
+  return (
+    <div style={{ marginTop: "30px" }}>
+      <div style={{ marginBottom: "15px", display: "flex", gap: "20px", alignItems: "center" }}>
+        <label>
+          DV Number:{" "}
+          <input 
+            type="text" 
+            value={inputDvNo} 
+            onChange={handleDvNoChange}
+            style={{ padding: "5px" }} 
+          />
+        </label>
+        <label>DV Date: <input type="date" value={inputDvDate} onChange={(e) => setInputDvDate(e.target.value)} style={{ padding: "5px" }} /></label>
+        <label style={{ marginLeft: "10px" }}>
+          DV Amount: <input type="text" readOnly value={selectedDVAmount} style={{ padding: "5px", width: "120px", fontWeight: "bold", backgroundColor: "#f8f9fa", border: "1px solid #ced4da" }} />
+        </label>
+        
+        <button
+          style={{ 
+            backgroundColor: "#d9534f", 
+            color: "white", 
+            padding: "8px 15px", 
+            border: "none", 
+            borderRadius: "5px", 
+            cursor: selectedRows.length === 0 ? "not-allowed" : "pointer",
+            opacity: selectedRows.length === 0 ? 0.7 : 1
+          }}
+          onClick={handleCreateDV}
+          disabled={selectedRows.length === 0}
+        >
+          Add DV
+        </button>
+      </div>
+
+      <table style={{ width: "100%", borderCollapse: "collapse", marginBottom: "50px" }}>
+        <thead>
+          <tr>
+            <th style={orangeTh}>Select</th>
+            {/* Status Header Removed */}
+            <th style={orangeTh}>Person No</th>
+            <th style={orangeTh}>Name</th>
+            <th style={orangeTh}>Bill Number</th>
+            <th style={orangeTh}>Bill Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          {bills.map((bill) =>
+            bill.employees.map((emp) => {
+              const rowKey = `${bill.billNo}-${emp.personNo}`;
+              const isSanctioned = emp.status === "Sanctioned";
+              return (
+                <tr key={rowKey}>
+                  <td style={tdStyle}>
+                    <input
+                      type="checkbox"
+                      checked={selectedRows.includes(rowKey) || isSanctioned}
+                      disabled={isSanctioned}
+                      onChange={() =>
+                        setSelectedRows((prev) =>
+                          prev.includes(rowKey) ? prev.filter((r) => r !== rowKey) : [...prev, rowKey]
+                        )
+                      }
+                    />
+                  </td>
+                  {/* Status Cell Removed */}
+                  <td style={tdStyle}>{emp.personNo}</td>
+                  <td style={tdStyle}>{emp.name}</td>
+                  <td style={tdStyle}>{bill.billNo}</td>
+                  <td style={tdStyle}>{formatDate(bill.billDate)}</td>
+                </tr>
+              );
+            })
+          )}
+        </tbody>
+      </table>
+
+      <h2>DV Table (Sanctioned Bills Only)</h2>
+      <table style={{ width: "100%", borderCollapse: "collapse" }}>
+        <thead>
+          <tr>
+            <th style={greenTh}>Person No</th>
+            <th style={greenTh}>Name</th>
+            <th style={greenTh}>DV Number</th>
+            <th style={greenTh}>DV Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          {bills.map((bill) =>
+            bill.employees.map((emp) => {
+              if (emp.status !== "Sanctioned") return null;
+              return (
+                <tr key={"dv-" + bill.billNo + emp.personNo}>
+                  <td style={tdStyle}>{emp.personNo}</td>
+                  <td style={tdStyle}>{emp.name}</td>
+                  <td style={tdStyle}>{emp.dvNo || bill.dvNo}</td>
+                  <td style={tdStyle}>{formatDate(emp.dvDate || bill.dvDate)}</td>
+                </tr>
+              );
+            })
+          )}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+export default SanctionPage;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
