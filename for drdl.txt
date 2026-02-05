@@ -1,3 +1,185 @@
+import React, { useState, useEffect } from "react";
+
+function ApprovedRecords() {
+  const [employees, setEmployees] = useState([]);
+  const [selectedDv, setSelectedDv] = useState(null);
+  const [hoveredDv, setHoveredDv] = useState(null); 
+
+  useEffect(() => {
+    fetch("http://localhost:8080/api/employees")
+      .then((res) => res.json())
+      .then((data) => {
+        const approved = data.filter(emp => emp.status === "DV GENERATED" || emp.status === "Sanctioned");
+        setEmployees(approved);
+      })
+      .catch((err) => console.error("Error fetching approved records:", err));
+  }, []);
+
+  // --- GROUPING LOGIC ---
+  const groupedRecords = employees.reduce((acc, emp) => {
+    const dvKey = emp.dvNo || "No DV";
+    const empAmount = Number(emp.salary || 0) + Number(emp.medical || 0) + Number(emp.insurance || 0);
+    if (!acc[dvKey]) {
+      acc[dvKey] = { dvNo: dvKey, dvDate: emp.dvDate, totalAmount: 0, items: [] };
+    }
+    acc[dvKey].totalAmount += empAmount;
+    acc[dvKey].items.push(emp);
+    return acc;
+  }, {});
+
+  const reportData = Object.values(groupedRecords);
+
+  // --- RESET HOVER ON BACK ---
+  const handleBack = () => {
+    setSelectedDv(null);
+    setHoveredDv(null); 
+  };
+
+  const formatDisplayDate = (dateString) => {
+    if (!dateString) return "";
+    const parts = dateString.split("-");
+    if (parts.length === 3 && parts[0].length === 4) {
+      return `${parts[2]}-${parts[1]}-${parts[0]}`;
+    }
+    return dateString;
+  };
+
+  // --- STYLES ---
+  const containerStyle = { padding: "40px", minHeight: "100vh", fontFamily: "'Segoe UI', Roboto, sans-serif" };
+  const cardStyle = { backgroundColor: "#ffffff", padding: "30px", borderRadius: "16px", boxShadow: "0 10px 30px rgba(0,0,0,0.04)", border: "1px solid #e2e8f0" };
+  const tdStyle = { padding: "15px", borderBottom: "1px solid #f1f5f9", textAlign: "center", color: "#475569", fontSize: "14px" };
+
+  const summaryColor = "#10b981"; // Teal Green
+  const detailColor = "#6d28d9";  // Deep Purple (New Option)
+
+  const getLinkStyle = (dvNo) => ({
+    textDecoration: "none", 
+    cursor: "pointer",
+    fontWeight: "bold",
+    transition: "color 0.2s ease",
+    color: hoveredDv === dvNo ? "#f97316" : "#059669" 
+  });
+
+  // --- DETAIL VIEW (Deep Purple Theme) ---
+  if (selectedDv) {
+    const dvInfo = groupedRecords[selectedDv];
+    return (
+      <div style={{ ...containerStyle, backgroundColor: "#f5f3ff" }}> {/* Light purple bg */}
+        <button 
+          onClick={handleBack} 
+          style={{ marginBottom: "20px", padding: "10px 20px", cursor: "pointer", borderRadius: "8px", border: "none", backgroundColor: detailColor, color: "white", fontWeight: "bold" }}
+        >
+          ← Back to Summary
+        </button>
+        
+        <div style={cardStyle}>
+          <div style={{ display: "flex", gap: "50px", marginBottom: "20px", padding: "10px", borderBottom: `2px solid ${detailColor}` }}>
+            <h3 style={{ color: "#4c1d95", margin: 0 }}>DV NUMBER: {dvInfo.dvNo}</h3>
+            <h3 style={{ color: "#4c1d95", margin: 0 }}>DV DATE: {formatDisplayDate(dvInfo.dvDate)}</h3>
+          </div>
+
+          <table style={{ width: "100%", borderCollapse: "collapse" }}>
+            <thead>
+              <tr>
+                <th style={{ ...tdStyle, backgroundColor: detailColor, color: "white", fontWeight: "600" }}>Person No</th>
+                <th style={{ ...tdStyle, backgroundColor: detailColor, color: "white", fontWeight: "600" }}>Person Name</th>
+                <th style={{ ...tdStyle, backgroundColor: detailColor, color: "white", fontWeight: "600" }}>DV Number</th>
+                <th style={{ ...tdStyle, backgroundColor: detailColor, color: "white", fontWeight: "600" }}>DV Date</th>
+                <th style={{ ...tdStyle, backgroundColor: detailColor, color: "white", fontWeight: "600" }}>Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              {dvInfo.items.map((emp, idx) => (
+                <tr key={emp.personNo} style={{ backgroundColor: idx % 2 === 0 ? "white" : "#faf5ff" }}>
+                  <td style={tdStyle}>{emp.personNo}</td>
+                  <td style={tdStyle}>{emp.name}</td>
+                  <td style={tdStyle}>{emp.dvNo}</td>
+                  <td style={tdStyle}>{formatDisplayDate(emp.dvDate)}</td>
+                  <td style={{ ...tdStyle, fontWeight: "bold", color: detailColor }}>
+                    {Number(emp.salary || 0) + Number(emp.medical || 0) + Number(emp.insurance || 0)}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colSpan="4" style={{ ...tdStyle, textAlign: "right", fontWeight: "800", fontSize: "16px", backgroundColor: "#f9fafb", color: "#4c1d95" }}>FINAL TOTAL AMOUNT:</td>
+                <td style={{ ...tdStyle, fontWeight: "800", fontSize: "16px", backgroundColor: detailColor, color: "white" }}>{dvInfo.totalAmount}</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    );
+  }
+
+  // --- SUMMARY VIEW (Green Theme) ---
+  return (
+    <div style={{ ...containerStyle, backgroundColor: "#f0fdf4" }}>
+      <h1 style={{ textAlign: "center", color: "#065f46", marginBottom: "30px", fontSize: "32px", fontWeight: "800" }}>Approved Records</h1>
+      <div style={cardStyle}>
+        <table style={{ width: "100%", borderCollapse: "collapse", backgroundColor: "white" }}>
+          <thead>
+            <tr>
+              <th style={{ ...tdStyle, backgroundColor: summaryColor, color: "white", fontWeight: "600" }}>DV Number</th>
+              <th style={{ ...tdStyle, backgroundColor: summaryColor, color: "white", fontWeight: "600" }}>DV Date</th>
+              <th style={{ ...tdStyle, backgroundColor: summaryColor, color: "white", fontWeight: "600" }}>Total Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            {reportData.length > 0 ? (
+              reportData.map((record, index) => (
+                <tr key={record.dvNo} style={{ backgroundColor: index % 2 === 0 ? "white" : "#f9fdfb" }}>
+                  <td style={tdStyle}>
+                    <span 
+                      style={getLinkStyle(record.dvNo)} 
+                      onMouseEnter={() => setHoveredDv(record.dvNo)}
+                      onMouseLeave={() => setHoveredDv(null)}
+                      onClick={() => setSelectedDv(record.dvNo)}
+                    >
+                      {record.dvNo}
+                    </span>
+                  </td>
+                  <td style={tdStyle}>{formatDisplayDate(record.dvDate)}</td>
+                  <td style={{ ...tdStyle, fontWeight: "bold", color: summaryColor }}>{record.totalAmount}</td>
+                </tr>
+              ))
+            ) : (
+              <tr><td colSpan="3" style={tdStyle}>No approved records found.</td></tr>
+            )}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+}
+
+export default ApprovedRecords;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 -- ORACLE INSERT SCRIPT
 INSERT ALL
   INTO employees (person_no, name, salary, medical, insurance, status) VALUES (1001, 'Arjun Sharma', 45000, 2000, 1500, 'ACTIVE')
