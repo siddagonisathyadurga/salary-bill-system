@@ -1,3 +1,88 @@
+Name         Null?    Type               
+------------ -------- ------------------ 
+ID           NOT NULL NUMBER             
+PERSON_NO             NUMBER(38)         
+NAME                  VARCHAR2(255 CHAR) 
+SALARY                NUMBER             
+MEDICAL               NUMBER             
+INSURANCE             NUMBER             
+BILL_NO               VARCHAR2(255 CHAR) 
+BILL_DATE             VARCHAR2(255 CHAR) 
+DV_NO                 VARCHAR2(255 CHAR) 
+DV_DATE               VARCHAR2(255 CHAR) 
+STATUS                VARCHAR2(255 CHAR) 
+ITAX_PERCENT          FLOAT(53)          
+NET_AMOUNT            FLOAT(53)  
+
+
+ALTER TABLE EMPLOYEE ADD (
+    ITAX_PERCENT NUMBER,
+    NET_AMOUNT NUMBER,
+    BILL_NO VARCHAR2(255),
+    BILL_DATE VARCHAR2(255),
+    DV_NO VARCHAR2(255),
+    DV_DATE VARCHAR2(255),
+    STATUS VARCHAR2(255)
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import React, { useState, useEffect } from "react";
 
 function ApprovedRecords() {
